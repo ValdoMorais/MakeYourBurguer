@@ -9,6 +9,13 @@
      <title>Hello Vue</title>
 </head>
 <body>
-    <div id="app">{{ message }}</div>
+    <div id="app">
+        <form id="app-form">
+            <input type="text" v-model="input_name" placeholder="Digite o seu nome">
+            <input type="submit" value="Enviar" v-on:click="submitform">
+        </form>
+        <p> O seu nome e: {{ name }}</p>
+        <p> Data Biding: {{ input_name }}</p>
+    </div>
 </body>
 </html>
